@@ -1,0 +1,8 @@
+{
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "C:\\Users\\Laura\\Desktop\\imersaoalura\\.venv\\Scripts\\black.exe",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}
