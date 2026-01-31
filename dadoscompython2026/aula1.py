@@ -1,13 +1,15 @@
-from utils import *
+from utils import*
 import pandas as pd
 
-pd.set_option("display.max_columns", None)
+#EXPLORANDO DADOS COM PANDAS
+
+pd.set_option("display.max_columns", None) # manda o pandas mostrar TODAS as colunas do DataFrame, sem cortar.
 
 df = pd.read_csv(
     "https://raw.githubusercontent.com/guilhermeonrails/data-jobs/refs/heads/main/salaries.csv"
 )
 
-# print(df.head())
+# print(df.head()) 
 # print(df.info())
 # print(df.describe())
 # print(df.shape)
