@@ -75,4 +75,23 @@ ordem = df_limpo.groupby("senioridade")["usd"].mean().sort_values(ascending=Fals
 # fig.update_traces(textinfo='percent+label')
 # fig.show()
 ##########################DESAFIO FIM DA AULA3
+# 1️⃣ Filtrar apenas Data Scientists
+ds = df[df['cargo'] == 'Data Scientist']
 
+# 2️⃣ Agrupar por país e calcular o salário médio
+salarios_por_pais = ds.groupby('empresa')['salario'].mean()
+
+# 3️⃣ Mostrar o salário médio por país
+print("Salário médio por país:\n", salarios_por_pais)
+
+# 4️⃣ Calcular e mostrar a diferença entre o país com maior e menor salário
+dif_max_min = salarios_por_pais.max() - salarios_por_pais.min()
+print("\nDiferença de salário entre países (máx - mín):", dif_max_min)
+
+# 5️⃣ Plotar gráfico de barras
+salarios_por_pais.sort_values().plot(kind='bar', figsize=(10,6), color='skyblue')
+plt.ylabel('Salário médio (USD)')
+plt.title('Salário médio de Data Scientists por país')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
